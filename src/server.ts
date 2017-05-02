@@ -110,7 +110,7 @@ export class Server {
         this.model.user = connection.model<IUserModel>('User', userSchema);
 
         // catch 404 and forward to error handler
-        this.app.use(() => (err: any, req: express.Request, res: express.Response, next: express.NextFunction) {
+        this.app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
             err.status = 404;
             next(err);
         });
