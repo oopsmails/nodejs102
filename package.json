@@ -1,0 +1,48 @@
+{
+  "name": "typescript-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tslint --force src/**/*.ts",
+    "clean": "rimraf build/*",
+    "prebuild": "npm run clean",
+    "build": "tsc",
+    "postbuild": "",
+    "build-test-concurrently": "concurrently \"npm run build\" \"mocha ./build/test\"",
+    "_watch-test": "mocha --watch --reporter spec ./build/test",
+    "mocha": "npm run build | mocha ./build/test",
+    "_test-orig": "echo \"Error: no test specified\" && exit 1",
+    "_test": "mocha --require source-map-support/register --recursive ./build/test",
+    "_test:dev": "mocha --require source-map-support/register --recursive ./build/test -w",
+    "_test:coverage": "istanbul cover node_modules/mocha/bin/_mocha -- --recursive ./build/test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oopsmails/nodejs102.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "cookie-parser": "^1.4.3",
+    "errorhandler": "^1.5.0",
+    "express": "^4.15.2",
+    "method-override": "^2.3.8",
+    "mongoose": "^4.9.7",
+    "morgan": "^1.8.1",
+    "q": "^1.5.0",
+    "rimraf": "^2.6.1",
+    "typescript": "^2.3.2"
+  },
+  "devDependencies": {
+    "@types/chai": "^3.5.2",
+    "@types/mocha": "^2.2.41",
+    "@types/mongodb": "^2.2.0",
+    "@types/mongoose": "^4.7.11",
+    "chai": "^3.5.0",
+    "mocha": "^3.3.0",
+    "mocha-typescript": "^1.1.2",
+    "tslint": "^5.1.0"
+  }
+}

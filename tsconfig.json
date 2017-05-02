@@ -1,0 +1,17 @@
+/// <reference path="typings/node/node.d.ts" />
+
+{
+    "compilerOptions": {
+        "module": "commonjs",
+        "target": "es6",
+        "removeComments": true,
+        "preserveConstEnums": true,
+        "outDir":"build/",
+        "rootDir": "src/",
+        "sourceMap": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
+

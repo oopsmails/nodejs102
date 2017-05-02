@@ -1,0 +1,47 @@
+npm init
+
+npm install --save-dev nodemon
+
+npm install express --save
+
+Open the package.json file and add this task to the script
+"start": "nodemon server.js"
+
+npm run start
+
+npm install mongoose --save
+
+npm install body-parser --save
+
+-------------------------------------------------
+--> Try to use Typescript
+
+revise, package.json
+create/copy, tsconfig.json, npm-shrinkwrap.json
+create/copy, tslint.json
+
+----------------------------------------------
+
+import Task from '../models/taskType'; => can be used with export default const User. 
+import { ITask } from '../models/taskType'; => can be used with export const User
+
+--> error:
+(node:2128) DeprecationWarning: Mongoose: mpromise (mongoose's default promise library) is deprecated, plug in
+your own promise library instead: http://mongoosejs.com/docs/promises.html
+
+=> try, http://brianflove.com/2016/11/11/typescript-2-express-mongoose-mocha-chai/
+
+npm install rimraf --save
+npm install @types/mongoose --save-dev
+npm install @types/mongodb --save-dev
+
+-----------------------------------------------
+
+=> try http://brianflove.com/2016/11/11/typescript-2-express-mongoose-mocha-chai/
+
+
+
+
+
+
+

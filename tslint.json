@@ -1,0 +1,23 @@
+{
+  "extends": ["tslint:recommended"],
+  "rules": {
+    "member-ordering" : [true, { "order": "fields-first" }],
+    "member-access": false,
+    "quotemark": [true, "single", "jsx-double"],
+    "ordered-imports": false,
+    "semicolon": [true, "always"],
+    "no-var-requires": false,
+    //    "no-unused-variable": [true, {"ignore-pattern": "^React"}],
+    "no-unused-variable": false,
+    "object-literal-sort-keys": false,
+    "trailing-comma": false,
+    "no-consecutive-blank-lines": false,
+    "no-trailing-whitespace": false,
+    "eofline": false,
+    "comment-format": false,
+    "no-empty": false,
+    "max-line-length": 140,
+    "no-console": false,
+    "no-string-literal": false
+  }
+}
