@@ -11,7 +11,7 @@
     "postbuild": "",
     "build-test-concurrently": "concurrently \"npm run build\" \"mocha ./build/test\"",
     "_watch-test": "mocha --watch --reporter spec ./build/test",
-    "mocha": "npm run build | mocha ./build/test",
+    "mocha": "npm run build && mocha ./build/test",
     "_test-orig": "echo \"Error: no test specified\" && exit 1",
     "_test": "mocha --require source-map-support/register --recursive ./build/test",
     "_test:dev": "mocha --require source-map-support/register --recursive ./build/test -w",
